@@ -1,0 +1,11 @@
+awk
+
+
+
+grep Com_update temp.txt | awk '{print $4}' >temp2.txt
+awk 'BEGIN {count=0;value=0;print "[start]user count is ", count} {count=count+1;value=value+$1;print $0;} END{print "[end]user count is ", count, "value is ", value}' temp2.txt
+
+grep Innodb_trx_commits 1.txt | awk '{print $4}' >temp2.txt
+
+awk 'BEGIN {count=0;value=0;print "[start]user count is ", count} {count=count+1;value=value+$1;print $0;} END{print "[end]user count is ", count, "value is ", value, "TPS is ",value/count}' temp2.txt
+
