@@ -1,24 +1,14 @@
 #############################################################
-#   File Name: add.sh
+#   File Name: for_add.sh
 #     Autohor: Hui Chen (c) 2020
 #        Mail: chenhui13@baidu.com
-# Create Time: 2020/03/21-21:51:21
+# Create Time: 2020/03/21-21:54:26
 #############################################################
-#!/bin/bash 
+#!/bin/bash
+
 i=0;
- ((i++))
- echo $i
-#1
-
-let i++
+while [ $i -lt 10000 ]
+do
+    ((i++))
+done
 echo $i
-#2
-
-expr $i + 1
-#3
-
-echo $i
-#2
-
-echo $i 1 | awk '{printf $1+$2}'
-#3
