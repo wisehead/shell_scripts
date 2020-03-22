@@ -9,3 +9,9 @@ if true; then echo "YES"; else echo "NO"; fi
 #YES
 if false; then echo "YES"; else echo "NO"; fi
 #NO
+true
+echo $?
+#0
+false
+echo $?
+#1
