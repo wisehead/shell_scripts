@@ -1,0 +1,13 @@
+#############################################################
+#   File Name: grep.sh
+#     Autohor: Hui Chen (c) 2020
+#        Mail: chenhui13@baidu.com
+# Create Time: 2020/03/28-17:46:48
+#############################################################
+var="get the length of me"
+echo $var | awk '{printf("%d\n", match($0,"the"));}'
+hahaha grep "consists of" test.txt   # 查询文件包含consists of的行，并打印这些行
+hahaha grep "consists[[:space:]]of" -n -H test.txt # 打印文件名，子串所在行的行号和该行的内容
+hahaha grep "consists[[:space:]]of" -n -o test.txt # 仅仅打印行号和匹配到的子串本身的内容
+hahaha awk '/consists of/{ printf("%s:%d:%s\n",FILENAME, FNR, $0)}' text  #看到没？和grep的结果一样
+hahaha sed -n -e '/consists of/=;/consists of/p' text #同样可以打印行号
