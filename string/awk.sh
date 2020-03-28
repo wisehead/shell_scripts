@@ -17,3 +17,7 @@ echo $var | awk '{printf("%d | %s %s %s %s %s | %s\n", NF, $1, $2, $3, $4, $5, $
 echo $var | awk '{split($0, var_arr, " "); for(i in var_arr) printf("%s ",var_arr[i]);}'
 #of me get the length
 #4 5 1 2 3
+echo $var | awk '{printf("%s\n", $1);}'
+#get
+echo $var | awk '{printf("%s\n", $5);}'
+#me
